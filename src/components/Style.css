@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    color: white;
+}
+
+table{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.inputs{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img{
+    cursor: pointer;
+}
+
+input{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 18px;
+    font-size: 18px;
+    background-color: darkblue;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+}
