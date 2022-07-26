@@ -11,12 +11,16 @@ export default function Lista() {
 
   const url = "http://localhost:8081/";
 
-  useEffect(() => {
+    useEffect(() => {
+      load();
+  }, [url]);
+  
+  function load (){
     fetch(url + "Lista")
       .then((response) => response.json())
       .then((data) => setLista(data))
       .catch((err) => console.log(err));
-  }, [url]);
+  }
 
   function novo() {
     setTipo("novo");
@@ -41,10 +45,12 @@ export default function Lista() {
 
   function excluir(cod) {
     axios.delete(url + "Lista/" + cod);
+    atualizar();
   }
 
   function atualizar() {
     setTipo("");
+    load();
   }
 
   function gravar() {
