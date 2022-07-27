@@ -1,6 +1,14 @@
+.inner{
+    display: none;
+}
+
 .sobre{
     text-align: center;
     color: white;
+}
+.sobre p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .sobre img{
     width: 600px;

@@ -3,6 +3,10 @@ h1{
     color: white;
 }
 
+.inner{
+    display: none;
+}
+
 table{
     font-size: 1.3rem;
     display: flex;

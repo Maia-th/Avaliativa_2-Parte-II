@@ -5,8 +5,11 @@ import "./Sobre.css";
 export default function Sobre() {
   return (
     <>
+      <div className="inner">
+        {(document.getElementById("titulo").innerText = "Trabalho Final")}
+      </div>
+
       <div className="sobre">
-        <h1>Trabalho Final</h1>
         <p>
           Esta página foi criada com o objetivo de consolidar os conhecimentos
           obtidos na segunda parte da disciplina de Desenvolvimento De Sistemas

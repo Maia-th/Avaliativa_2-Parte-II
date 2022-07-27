@@ -11,11 +11,11 @@ export default function Lista() {
 
   const url = "http://localhost:8081/";
 
-    useEffect(() => {
-      load();
+  useEffect(() => {
+    load();
   }, [url]);
-  
-  function load (){
+
+  function load() {
     fetch(url + "Lista")
       .then((response) => response.json())
       .then((data) => setLista(data))
@@ -80,6 +80,10 @@ export default function Lista() {
 
   return (
     <div>
+      <div className="inner">
+        {(document.getElementById("titulo").innerText = "CONTATOS")}
+      </div>
+
       {lista ? (
         <ListaTabela dados={lista} Editar={editar} Excluir={excluir} />
       ) : (
@@ -87,38 +91,38 @@ export default function Lista() {
       )}
       <div className="inputs">
         <button type="button" onClick={novo}>
-        Criar Novo Contato
-      </button>
-      {tipo ? (
-        <>
-          <input
-            type="text"
-            name="txtNome"
-            value={nome}
-            placeholder= "Nome"
-            onChange={(e) => {
-              setNome(e.target.value);
-            }}
-          />
-          <input
-            type="text"
-            name="txtnumero"
-            value={numero}
-            placeholder= "Número"
-            onChange={(e) => {
-              setNumero(e.target.value);
-            }}
-          />
-          <button type="button" onClick={cancelar}>
-            Cancelar
-          </button>
-          <button type="button" onClick={gravar}>
-            Gravar
-          </button>
-        </>
-      ) : (
-        false
-      )}
+          Criar Novo Contato
+        </button>
+        {tipo ? (
+          <>
+            <input
+              type="text"
+              name="txtNome"
+              value={nome}
+              placeholder="Nome"
+              onChange={(e) => {
+                setNome(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              name="txtnumero"
+              value={numero}
+              placeholder="Número"
+              onChange={(e) => {
+                setNumero(e.target.value);
+              }}
+            />
+            <button type="button" onClick={cancelar}>
+              Cancelar
+            </button>
+            <button type="button" onClick={gravar}>
+              Gravar
+            </button>
+          </>
+        ) : (
+          false
+        )}
       </div>
     </div>
   );
